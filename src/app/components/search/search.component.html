@@ -1,0 +1,97 @@
+<section class="search" id="search">
+    <div class="search-text flex" id="work">
+    <h2 style="margin-bottom: 10px;"> We all , will change the World...</h2>
+    <p>Use filter to find data.</p>
+  <div class="about-search">
+    <!--TABLE-->
+    <div class="row">
+    <mat-form-field appearance="fill">
+      <input class="input-part" matInput (keyup)="applyFilter($event.target.value)" style="font-size:20px;color: white;padding: 1px;
+    margin: -55px;border-bottom: 2px;width: 350px;" placeholder="Type to Filter">
+    </mat-form-field>
+  </div>
+
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Nom_Com Column -->
+    <ng-container matColumnDef="nom_com" >
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> NomCom </th>
+      <td mat-cell *matCellDef="let element"> {{element.Nom_Com}} </td>
+    </ng-container>
+
+    <!-- Code_Iris Column -->
+    <ng-container matColumnDef="code_iris">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Code_Iris </th>
+      <td mat-cell *matCellDef="let element"> {{element.Code_Iris}} </td>
+    </ng-container>
+
+    <!-- Rank_Of_Sore_Global_Region_1 Column -->
+    <ng-container matColumnDef="rank_of_score_global_region_1">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Rank </th>
+      <td mat-cell *matCellDef="let element"> {{element.Rank_of_SCORE_GLOBAL_region_1}} </td>
+    </ng-container>
+
+    <!-- Nom_Iris Column -->
+    <ng-container matColumnDef="nom_iris">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Nom_Iris </th>
+      <td mat-cell *matCellDef="let element"> {{element.Nom_Iris}} </td>
+    </ng-container>
+
+    <!-- Population Column -->
+    <ng-container matColumnDef="population">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Population </th>
+      <td mat-cell *matCellDef="let element"> {{element.Population}} </td>
+    </ng-container>
+
+    <!-- Score_Global Column -->
+    <ng-container matColumnDef="score_global">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Score_Global </th>
+      <td mat-cell *matCellDef="let element"> {{element.SCORE_GLOBAL}} </td>
+    </ng-container>
+
+    <!-- Acces_Aux_Interfaces_Numeriques Column -->
+    <ng-container matColumnDef="acces_aux_interfaces_numeriques">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Aux Numeriques </th>
+      <td mat-cell *matCellDef="let element"> {{element.ACCES_AUX_INTERFACES_NUMERIQUES}} </td>
+    </ng-container>
+
+    <!-- Acces_a_Linformation Column -->
+    <ng-container matColumnDef="acces_a_linformation">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Acces Linformation </th>
+      <td mat-cell *matCellDef="let element"> {{element.ACCES_A_LINFORMATION}} </td>
+    </ng-container>
+
+    <!-- Competences_Administatives Column -->
+    <ng-container matColumnDef="competences_administatives">
+      <th mat-header-cell *matHeaderCellDef class="try try-table">  Comp. Adminis. </th>
+      <td mat-cell *matCellDef="let element"> {{element.COMPETENCES_ADMINISTATIVES}} </td>
+    </ng-container>
+
+    <!-- Competences_Numeriques_Scolaires Column -->
+    <ng-container matColumnDef="competences_numeriques_scolaires">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Comp. Num. Scolaires </th>
+      <td mat-cell *matCellDef="let element"> {{element.COMPETENCES_NUMERIQUES_SCOLAIRES}} </td>
+    </ng-container>
+
+    <!-- Global_Acces Column -->
+    <ng-container matColumnDef="global_acces">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Global Acces </th>
+      <td mat-cell *matCellDef="let element"> {{element.GLOBAL_ACCES}} </td>
+    </ng-container>
+
+    <!-- Global_Competences Column -->
+    <ng-container matColumnDef="global_competences">
+      <th mat-header-cell *matHeaderCellDef class="try try-table"> Global Competences </th>
+      <td mat-cell *matCellDef="let element"> {{element.GLOBAL_COMPETENCES}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+ 
+    <!--TABLE-->
+               
+    </div>
+    <mat-paginator style="padding-bottom: 200px;" [pageSize]="30"></mat-paginator>
+    </div>
+</section>

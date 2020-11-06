@@ -1,0 +1,28 @@
+.try{background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;}
+
+.try-table  {
+        border-collapse: collapse;
+        margin: 15px 0;
+        font-size: 1.4em;
+        min-width: 30px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.mat-table{
+    width: 98%;
+} 
+.row{
+    max-width: 100%;
+}
+
+.mat-paginator{
+    height: 60px;
+    width: 50px;
+}
+.input-part{
+    border: #009879 2px;
+}
